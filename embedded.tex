@@ -1,6 +1,188 @@
-\documentclass{article}
-\begin{document}
-Hello, world!
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
 
-This is a test of LaTeX compilation.
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Kevin Chen} \\ \vspace{1pt}
+    \small (585) 797-5153 $|$ \href{mailto:x@x.com}{\underline{kc681269@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/...}{\underline{https://www.linkedin.com/in/k3vnc/}} $|$
+\end{center} 
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Rochester Institute of Technology}{Rochester, NY}
+      {Bachelor of Science in Software Engineering}{}
+      \resumeItemListStart
+        \resumeItem{\textbf{Cumulative GPA: 3.13}}
+        \resumeItem{\textbf{Dean's List: Spring 2023}}
+        \resumeItem{\textbf{Relevant Courses:} Eng Cloud Software Systems, Software Testing, Engineering of Enterprise Software Systems, Engineering of Software Subsystems (Embedded), Software Process \& Project Management, Web Engineering, Software Development and Problem Solving 1 \& 2 (Python, Java, Git)}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Programming Languages}{: Java, Python, JavaScript, TypeScript, C, C++, SQL.} \\
+\textbf{Web Technologies}{: HTML, CSS, React.js, Next.js, Node.js, Express.js, REST APIs, OAuth 2.0.} \\
+\textbf{Databases}{: MongoDB, PostgreSQL.} \\
+\textbf{Development Tools}{: Git, VS Code, Linux/Unix, Postman,  cURL, Vim, Docker, Jest.} \\
+\textbf{Other Technologies}{: Apache HTTP Server, STM32Cube, JSON, XML, Selenium.}}}\\
+\end{itemize}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading
+          {\textbf{MIDI Player} $|$ \emph{C, STM32Cube, Git}}{2024}
+          \resumeItemListStart
+            \resumeItem{Developed a MIDI player using C and a STM32 Nucleo board to parse and play MIDI files.}
+            \resumeItem{Generated and played musical notes on a piezo buzzer from parsed MIDI data.}
+\resumeItem{Utilized microcontroller peripherals including USART for file transfer, GPIO for button inputs, DAC for audio output, and NVIC for interrupt handling to create a complete embedded audio system.}
+            \resumeItem{Implemented features such as track selection, button control through external interrupts, and playback.}
+          \resumeItemListEnd
+                \resumeProjectHeading
+          {\textbf{Enterprise Application Project} $|$ \emph{MERN Stack (MongoDB, Express.js, React,, Node.js, Recharts)}}{2024}
+          \resumeItemListStart
+            \resumeItem{Designed and implemented a full-stack application using the MERN stack, adhering to departmental and corporate requirements.}
+            \resumeItem{Developed and tested a MongoDB-backed RESTful API with Express.js, including endpoints for CRUD operations, database initialization, and unit tests using Jest.}
+            \resumeItem{Created a React-based client application, integrating features such as filtering, adding, editing, and deleting data.}
+            \resumeItem{Deployed the full application on an Ubuntu server with Node.js and MongoDB, ensuring independent functionality for each department's APIs and client apps.}
+            \resumeItem{Collaborated on implementing a consistent corporate theme across all departmental applications with shared landing pages and branding.}
+            \resumeItem{Conducted operations reviews with the professor and had frequent team meetings.}
+            \resumeItem{Added an integrated dashboard with Recharts for data analytics, providing metrics such as employee breakdowns, sales insights, and cost analysis with interactive visualizations.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{WatchOS Llama App} $|$ \emph{XCode, Groq API}}{2024}
+          \resumeItemListStart
+            \resumeItem{Created a watchOS app voice to voice chatbot.}
+            \resumeItem{Used Groq APIs for Whisper v3 Large and Llama 3.1 70B inference.}
+          \resumeItemListEnd
+      
+      \resumeProjectHeading
+          {\textbf{Rush Hour Game} $|$ \emph{Java, JavaFX, Git, JUnit}}{2023}
+          \resumeItemListStart
+            \resumeItem{Worked in a team of three using pair programming to create a JavaFX puzzle while practicing software development best practices.}
+              \begin{itemize}
+                \item Led the implementation of the core game logic and backtracking algorithm for puzzle solving.
+                \item Coordinated with team members to integrate JavaFX GUI components.
+                \item Established Git workflow for version control and implemented JUnit tests for critical functionalities.
+              \end{itemize}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+  
+%-------------------------------------------
 \end{document}
