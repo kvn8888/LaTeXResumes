@@ -9,12 +9,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/kvn8888/latex-resume-builder:latest
+
     steps:
       - uses: actions/checkout@v3
-      
-      - name: Install TeX Live
-        run: sudo apt-get update && sudo apt-get install -y texlive-full latexmk
-
+    
       - name: Compile all .tex files
         run: |
           find . -name '*.tex' | while read texfile; do
