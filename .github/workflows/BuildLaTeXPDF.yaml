@@ -10,30 +10,71 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/kvn8888/latex-resume-builder:latest
-    defaults:
-      run:
-        working-directory: ${{ github.workspace }}
+    # defaults: # Let's try without this for a moment and be explicit
+    #   run:
+    #     working-directory: ${{ github.workspace }}
     steps:
       - uses: actions/checkout@v3
 
       - name: Install git
+        # This step will run in the container's default WORKDIR
+        # or /github/workspace if not set by the container.
+        # apt-get should be fine regardless of pwd for system-wide install.
         run: apt-get update && apt-get install -y git
 
       - name: Compile all .tex files
+        working-directory: ${{ github.workspace }} # Be explicit
         run: |
-          find . -name '*.tex' | while read texfile; do
+          # Ensure pdf directory exists relative to workspace
+          mkdir -p pdf
+          find . -maxdepth 1 -name '*.tex' | while read texfile; do
             filename=$(basename "$texfile" .tex)
-            echo "Compiling $texfile ..."
-            latexmk -pdf -interaction=nonstopmode -outdir=pdf "$texfile"
+            echo "Compiling $texfile into pdf/ ..."
+            latexmk -pdf -interaction=nonstopmode -outdir=./pdf "$texfile"
           done
+          echo "Contents of pdf directory:"
+          ls -la ${{ github.workspace }}/pdf
+
+      # This step uploads artifacts, ensure paths are correct
+      - name: Upload all PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled-pdfs
+          path: ${{ github.workspace }}/pdf/*.pdf # Use absolute path for clarity
+
+      - name: Debug before git commit
+        if: github.ref == 'refs/heads/main'
+        working-directory: ${{ github.workspace }} # Be explicit
+        run: |
+          echo "Current directory: $(pwd)"
+          echo "Workspace: ${{ github.workspace }}"
+          echo "Listing workspace contents:"
+          ls -la
+          echo "Checking for .git directory:"
+          ls -la .git || echo ".git directory not found here!"
+          echo "Git version:"
+          git --version
 
       - name: Commit and push PDFs to repo
         if: github.ref == 'refs/heads/main'
+        working-directory: ${{ github.workspace }} # Be explicit
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
+          echo "Attempting git operations in $(pwd)"
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          # git fetch # Not strictly necessary if we just checked out main
+          # git checkout main # Already on main due to push trigger
+          
+          echo "Adding files from pdf/ directory"
+          ls -la pdf # See what's in the pdf directory from git's perspective
           git add pdf/*.pdf
+          
+          echo "Committing changes..."
+          # Use git status to see what's staged before committing
+          git status 
           git commit -m "Update compiled PDFs [skip ci]" || echo "No changes to commit"
+          
+          echo "Pushing to main..."
           git push "https://x-access-token:${GH_PAT}@github.com/${GITHUB_REPOSITORY}.git" main
