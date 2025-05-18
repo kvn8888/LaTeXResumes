@@ -2,88 +2,38 @@ name: Build LaTeX PDF
 
 on:
   push:
-<<<<<<< HEAD
-    branches: [ main ]
-=======
     branches:
       - main
->>>>>>> 9c33969 (Enhance GitHub Actions workflow to automatically commit and push compiled PDFs to the repository)
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    # use your LaTeX container
     container:
-      image: ghcr.io/kvn8888/latex-resume-builder:latest
+      #use docker image from docker hub
+      image: k3vnc/personal:latest
 
     steps:
-<<<<<<< HEAD
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Install git
-        run: |
-          apt-get update
-          apt-get install -y git
-=======
       - uses: actions/checkout@v3
->>>>>>> 9c33969 (Enhance GitHub Actions workflow to automatically commit and push compiled PDFs to the repository)
 
       - name: Compile all .tex files
         run: |
-          # ensure we're in /github/workspace
-          cd "$GITHUB_WORKSPACE"
-
-          # make output dir
-          mkdir -p pdf
-
-          # compile each .tex at the root of the repo
-          for tex in *.tex; do
-            echo "Compiling $tex …"
-            latexmk -pdf \
-              -interaction=nonstopmode \
-              -outdir=pdf \
-              "$tex"
+          find . -name '*.tex' | while read texfile; do
+            filename=$(basename "$texfile" .tex)
+            echo "Compiling $texfile ..."
+            latexmk -pdf -interaction=nonstopmode -outdir=pdf "$texfile"
           done
 
-<<<<<<< HEAD
-          echo "Built PDFs:"
-          ls -l pdf
-
-      - name: Upload compiled PDFs
-=======
       - name: Upload all PDFs
->>>>>>> 9c33969 (Enhance GitHub Actions workflow to automatically commit and push compiled PDFs to the repository)
         uses: actions/upload-artifact@v4
         with:
           name: compiled-pdfs
           path: pdf/*.pdf
 
-<<<<<<< HEAD
-      - name: Commit & push PDFs back to main
-=======
       - name: Commit and push PDFs to repo
->>>>>>> 9c33969 (Enhance GitHub Actions workflow to automatically commit and push compiled PDFs to the repository)
         if: github.ref == 'refs/heads/main'
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-<<<<<<< HEAD
-          cd "$GITHUB_WORKSPACE"
-
-          # configure the commit author
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-          # stage and commit
-          git add pdf
-          git commit -m "Update compiled PDFs [skip ci]" \
-            || echo "🎉 No changes to commit"
-
-          # push via PAT
-          git push "https://${GH_PAT}@github.com/${GITHUB_REPOSITORY}.git" main
-=======
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git fetch
@@ -91,4 +41,3 @@ jobs:
           git add pdf/*.pdf
           git commit -m "Update compiled PDFs [skip ci]" || echo "No changes to commit"
           git push "https://x-access-token:${GH_PAT}@github.com/${GITHUB_REPOSITORY}.git" main
->>>>>>> 9c33969 (Enhance GitHub Actions workflow to automatically commit and push compiled PDFs to the repository)
