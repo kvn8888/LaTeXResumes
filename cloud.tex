@@ -138,22 +138,30 @@
 \textbf{Frontend}{: HTML, CSS, React.js, Next.js, Tailwind CSS.} \\
 \textbf{Backend}{: Node.js, Express.js, REST APIs, OAuth 2.0, JWT.} \\
 \textbf{Databases}{: MongoDB, PostgreSQL.} \\
-\textbf{Dev Tools}{: Git, GitHub, GitHub Actions, GitLab (CI/CD, Runner), Docker, Docker Hub, VS Code, Postman, cURL, Vim, Jest, Unix/Linux.}
+\textbf{Dev Tools}{: Git, GitHub, GitHub Actions, GitLab (CI/CD, Runner), Docker, Docker Hub, VS Code, Postman, cURL, Vim, Jest, Unix/Linux.} \\
 \textbf{Cloud \& Infra}{: AWS (Lambda, EventBridge, SNS, Comprehend, EC2, S3, CloudWatch, IAM), Terraform, Vercel.} \\
-\textbf{Other}{: Apache HTTP Server, Selenium, JSON, XML.}}}
+\textbf{Other}{: Apache HTTP Server, Selenium, JSON, XML.}}
 \end{itemize}
 
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
+    \resumeProjectHeading
+        {\textbf{Stock Sentiment Tracker} $|$ \emph{AWS (Lambda, EventBridge, SNS, Comprehend), Terraform, Boto3, Python}}{2025}
+        \resumeItemListStart
+          \resumeItem{Collaborated in a team of four to build a sentiment analysis platform for stock discussions using AWS cloud services.}
+          \resumeItem{Developed AWS Lambda functions using Python and Boto3 to query DynamoDB and analyze stock sentiment with Amazon Comprehend, returning structured scores for frontend display.}
+          \resumeItem{Configured EventBridge rules and Lambda triggers to send daily email alerts via SNS for subscribed watchlist tickers.}
+          \resumeItem{Wrote Terraform code to provision infrastructure (EventBridge, Lambda, SNS, IAM roles), excluding DynamoDB.}
+          \resumeItem{Ensured efficient sentiment analysis by skipping entries with existing scores and conditionally invoking Comprehend.}
+        \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{Stock Sentiment Tracker} $|$ \emph{AWS (Lambda, EventBridge, SNS, Comprehend), Terraform, Boto3, Python}}{2025}
+          {\textbf{MIDI Player} $|$ \emph{C, STM32Cube, Git}}{2024}
           \resumeItemListStart
-            \resumeItem{Collaborated in a team of four to build a sentiment analysis platform for stock discussions using AWS cloud services.}
-            \resumeItem{Developed AWS Lambda functions using Python and Boto3 to query DynamoDB and analyze stock sentiment with Amazon Comprehend, returning structured scores for frontend display.}
-            \resumeItem{Configured EventBridge rules and Lambda triggers to send daily email alerts via SNS for subscribed watchlist tickers.}
-            \resumeItem{Wrote Terraform code to provision infrastructure (EventBridge, Lambda, SNS, IAM roles), excluding DynamoDB.}
-            \resumeItem{Ensured efficient sentiment analysis by skipping entries with existing scores and conditionally invoking Comprehend.}
+            \resumeItem{Developed a MIDI player using C and a STM32 Nucleo board to parse and play MIDI files.}
+            \resumeItem{Generated and played musical notes on a piezo buzzer from parsed MIDI data.}
+            \resumeItem{Utilized microcontroller peripherals including USART for file transfer, GPIO for button inputs, DAC for audio output, and NVIC for interrupt handling to create a complete embedded audio system.}
+            \resumeItem{Implemented features such as track selection, button control through external interrupts, and playback.}
           \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{Enterprise Application Project} $|$ \emph{MERN Stack (MongoDB, Express.js, React,, Node.js), Recharts}}{2024}
@@ -165,15 +173,6 @@
             \resumeItem{Collaborated on implementing a consistent corporate theme across all departmental applications with shared landing pages and branding.}
             \resumeItem{Conducted operations reviews with the professor and had frequent team meetings.}
             \resumeItem{Added an integrated dashboard with Recharts for data analytics, providing metrics such as employee breakdowns, sales insights, and cost analysis with interactive visualizations.}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Live Transcribing Fact Checker} $|$ \emph{React Native, Azure Speech Services, Google Gemini API}}{2025}
-          \resumeItemListStart
-            \resumeItem{Developed a mobile application that provides real-time transcription and fact-checking capabilities using React Native.}
-            \resumeItem{Integrated Azure Speech Services API for accurate real-time speech-to-text transcription.}
-            \resumeItem{Implemented Google Gemini API for intelligent fact-checking and verification of transcribed content.}
-            \resumeItem{Created a user-friendly interface for displaying transcription results alongside fact-checking insights.}
-            \resumeItem{Optimized performance for real-time processing and reduced latency in mobile environments.}
           \resumeItemListEnd
       \resumeSubHeadingListEnd 
 
