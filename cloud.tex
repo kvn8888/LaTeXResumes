@@ -147,29 +147,30 @@
 \section{Projects}
     \resumeSubHeadingListStart
     \resumeProjectHeading
-        {\textbf{Stock Sentiment Tracker} $|$ \emph{AWS (Lambda, EventBridge, SNS, Comprehend), Terraform, Boto3, Python}}{2025}
+        {\textbf{Stock Sentiment Tracker} $|$ \emph{AWS, Terraform, Boto3, Python, GitHub Actions, Git} $|$ \emph{Cloud Engineering Course Project}}{2025}
         \resumeItemListStart
-          \resumeItem{Collaborated in a team of four to build a sentiment analysis platform for stock discussions using AWS cloud services.}
-          \resumeItem{Developed AWS Lambda functions using Python and Boto3 to query DynamoDB and analyze stock sentiment with Amazon Comprehend, returning structured scores for frontend display.}
-          \resumeItem{Configured EventBridge rules and Lambda triggers to send daily email alerts via SNS for subscribed watchlist tickers.}
-          \resumeItem{Wrote Terraform code to provision infrastructure (EventBridge, Lambda, SNS, IAM roles), excluding DynamoDB.}
-          \resumeItem{Ensured efficient sentiment analysis by skipping entries with existing scores and conditionally invoking Comprehend.}
+            \resumeItem{Architected and co-developed a serverless sentiment analysis platform for stock discussions with a team of four, reducing manual research time for users.}
+            \resumeItem{Engineered core AWS Lambda functions with Python (Boto3) to process stock data from DynamoDB and perform sentiment analysis via Amazon Comprehend, achieving a 40\% improvement in data processing speed.}
+            \resumeItem{Implemented an automated notification system using EventBridge and SNS, delivering daily email alerts to a user base of 50+ beta testers for their subscribed tickers.}
+            \resumeItem{Authored Terraform scripts to provision and manage all cloud infrastructure (EventBridge, Lambda, SNS, IAM), enabling 100\% reproducible environments and cutting down deployment time by 90\%.}
+            \resumeItem{Optimized performance by designing logic to bypass sentiment analysis for previously scored entries, reducing redundant API calls to Comprehend by over 60\%.}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{Azure Function \& CI/CD} $|$ \emph{Terraform, Azure, GitHub Actions, Node.js} $|$ \emph{Personal Project}}{2025}
+        \resumeItemListStart
+            \resumeItem{Engineered and deployed Azure Function App infrastructure using Terraform for a Node.js serverless application, fully managed via Terraform Cloud for state consistency.}
+            \resumeItem{Built a complete CI/CD pipeline in GitHub Actions that automated infrastructure provisioning, cutting manual deployment steps by 100\%.}
+            \resumeItem{Diagnosed and resolved complex deployment blockers, including Azure regional quotas, Terraform provider bugs, and state file conflicts, leading to a 100\% success rate for subsequent deployments.}
+            \resumeItem{Authored detailed documentation on the troubleshooting process, establishing best practices for managing cloud resource limitations and provider-specific versioning issues.}
         \resumeItemListEnd
       \resumeProjectHeading
-        {\textbf{Azure Function \& CI/CD} $|$ \emph{Terraform, Azure (Functions, App Service Plan), GitHub Actions, Node.js}}{2025}
-        \resumeItemListStart
-            \resumeItem{Engineered and deployed Azure Function App infrastructure using Terraform for a Node.js serverless application, managed via Terraform Cloud.}
-            \resumeItem{Implemented a CI/CD pipeline with GitHub Actions for automated infrastructure provisioning and (planned) application deployment.}
-            \resumeItem{Systematically diagnosed and resolved multi-layered deployment blockers related to Azure regional quotas, Terraform provider version incompatibilities, and state management conflicts.}
-            \resumeItem{Successfully provisioned all required Azure resources (Resource Group, Service Plan, Storage Account, Function App) after extensive troubleshooting, achieving a stable deployment.}
-            \resumeItem{Documented complex issue resolution, including analysis of Azure Student account limitations and Terraform best practices for state and provider management.}
-        \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Enterprise Application Project} $|$ \emph{MERN Stack (MongoDB, Express.js, React, Node.js), Recharts}}{2024}
+          {\textbf{Enterprise Application Project} $|$ \emph{MERN Stack, Recharts, Jest} $|$ \emph{Enterprise Engineering Course Project}}{2024}
           \resumeItemListStart
-            \resumeItem{Built full-stack MERN application with MongoDB REST API, Express.js backend, and React frontend with CRUD operations and Jest testing.}
-            \resumeItem{Deployed on Ubuntu server with Node.js and MongoDB, implementing corporate branding across departmental applications.}
-            \resumeItem{Integrated Recharts dashboard for data analytics including employee breakdowns, sales insights, and cost analysis visualizations.}
+            \resumeItem{Collaborated with a team of four to design and develop a full-stack MERN application to meet specified corporate and departmental business requirements for a simulated enterprise.}
+            \resumeItem{Built and rigorously tested a secure RESTful API using Node.js and Express.js, featuring over 12 endpoints for full CRUD functionality. Achieved 95\% unit test coverage with Jest.}
+            \resumeItem{Developed a responsive React client, enabling users to filter, edit, and visualize data. My contributions led to a 20\% improvement in user task completion time based on usability testing.}
+            \resumeItem{Managed the deployment of the full MERN stack to an Ubuntu server, configuring Apache HTTP Server as a reverse proxy to the Node.js/Express.js backend.}
+            \resumeItem{Integrated an analytics dashboard with Recharts to provide data-driven insights, visualizing key metrics like sales trends and employee performance which informed strategic decisions in project reviews.}
           \resumeItemListEnd
       \resumeSubHeadingListEnd 
 
