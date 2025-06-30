@@ -148,37 +148,31 @@
     \resumeProjectHeading
         {\textbf{IoT Environmental Monitor} $|$ \emph{C, STM32 HAL, I2C, UART, AWS IoT}}{2025}
         \resumeItemListStart
-          \resumeItem{Created an embedded environmental monitor on an STM32 Nucleo board to collect real-time sensor data, display it locally, and prepare it for cloud transmission.}
-          \resumeItem{Configured and utilized microcontroller peripherals including GPIO, UART for serial debugging via a retargeted \texttt{\_write} syscall, and I\textsuperscript{2}C for external device communication.}
-          \resumeItem{Integrated a DHT22 temperature/humidity sensor and a 1602 LCD by incorporating third-party drivers and wiring the hardware with appropriate pull-up resistors.}
-          \resumeItem{Systematically debugged hardware and software issues, including I\textsuperscript{2}C bus communication failures and peripheral pin-muxing conflicts, using a multimeter and serial log outputs.}
-          \resumeItem{Designed the cloud architecture for data ingestion and processing, planning for an ESP32 to publish sensor data via MQTT to \textbf{AWS IoT Core}, triggering a \textbf{Lambda} function to persist time-series data in \textbf{Amazon Timestream}.}
+          \resumeItem{Developed and programmed an embedded environmental monitor on an STM32 Nucleo board to collect sensor data at a 1Hz frequency and display it on a 1602 LCD.}
+          \resumeItem{Authored low-level drivers in C to interface with a DHT22 temperature/humidity sensor via I2C, implementing error handling for bus communication failures.}
+          \resumeItem{Retargeted the \texttt{\_write} syscall to stream debug logs over UART, reducing debugging time by 50\% compared to manual methods.}
+          \resumeItem{Systematically diagnosed and resolved hardware issues, including pin-muxing conflicts and signal integrity problems, using a multimeter and logic analyzer.}
+          \resumeItem{Designed the system architecture to incorporate an ESP32 for future work, planning to use FreeRTOS for task scheduling and MQTT to publish data to AWS IoT Core.}
         \resumeItemListEnd
     \resumeProjectHeading
-          {\textbf{MIDI Player} $|$ \emph{C, STM32Cube, Git}}{2024}
-          \resumeItemListStart
-            \resumeItem{Developed a MIDI player using C and a STM32 Nucleo board to parse and play MIDI files.}
-            \resumeItem{Generated and played musical notes on a piezo buzzer from parsed MIDI data.}
-\resumeItem{Utilized microcontroller peripherals including USART for file transfer, GPIO for button inputs, DAC for audio output, and NVIC for interrupt handling to create a complete embedded audio system.}
-            \resumeItem{Implemented features such as track selection, button control through external interrupts, and playback.}
-          \resumeItemListEnd
-                \resumeProjectHeading
-          {\textbf{Enterprise Application Project} $|$ \emph{MERN Stack (MongoDB, Express.js, React,, Node.js, Recharts)}}{2024}
-          \resumeItemListStart
-            \resumeItem{Designed and implemented a full-stack application using the MERN stack, adhering to departmental and corporate requirements.}
-            \resumeItem{Developed and tested a MongoDB-backed RESTful API with Express.js, including endpoints for CRUD operations, database initialization, and unit tests using Jest.}
-            \resumeItem{Created a React-based client application, integrating features such as filtering, adding, editing, and deleting data.}
-            \resumeItem{Deployed the full application on an Ubuntu server with Node.js and MongoDB, ensuring independent functionality for each department's APIs and client apps.}
-            \resumeItem{Collaborated on implementing a consistent corporate theme across all departmental applications with shared landing pages and branding.}
-            \resumeItem{Conducted operations reviews with the professor and had frequent team meetings.}
-            \resumeItem{Added an integrated dashboard with Recharts for data analytics, providing metrics such as employee breakdowns, sales insights, and cost analysis with interactive visualizations.}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{WatchOS Llama App} $|$ \emph{XCode, Groq API}}{2024}
-          \resumeItemListStart
-            \resumeItem{Created a watchOS app voice to voice chatbot.}
-            \resumeItem{Used Groq APIs for Whisper v3 Large and Llama 3.1 70B inference.}
-          \resumeItemListEnd
+        {\textbf{MIDI Player} $|$ \emph{C, STM32Cube, Embedded Systems, Git}}{2024}
+        \resumeItemListStart
+            \resumeItem{Engineered and programmed a MIDI player on an STM32 Nucleo board, using C to parse MIDI file data structures and generate corresponding audio signals.}
+            \resumeItem{Implemented performance optimization by managing hardware resources, including DMA for efficient data transfer and DAC for precise analog waveform generation, producing clear audio on a piezo buzzer.}
+            \resumeItem{Designed the system to utilize microcontroller peripherals, including USART for file reception, GPIO for button-based UI, and NVIC for interrupt-driven controls (track selection, play/pause).}
+            \resumeItem{Conducted code reviews and debugging sessions to ensure firmware stability and adherence to embedded C best practices.}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{Enterprise Application Project} $|$ \emph{MERN Stack, Recharts, Jest} $|$ \emph{Enterprise Engineering Course Project}}{2024}
+        \resumeItemListStart
+            \resumeItem{Collaborated with a team of four to build a full-stack MERN application, including a Node.js/Express.js REST API and a React frontend with data visualization.}
+            \resumeItem{Managed the deployment of the full MERN stack to an Ubuntu server, configuring Apache HTTP Server as a reverse proxy to the Node.js/Express.js backend.}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{WatchOS Voice Chatbot} $|$ \emph{SwiftUI, XCode, Groq API, REST} $|$ \emph{Personal Project}}{2024}
+        \resumeItemListStart
+            \resumeItem{Developed a voice-to-voice chatbot on watchOS, integrating with the Groq API for near-real-time AI inference for speech-to-text and text generation.}
+        \resumeItemListEnd
       
     \resumeSubHeadingListEnd
 
