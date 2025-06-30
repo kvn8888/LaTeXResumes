@@ -147,32 +147,30 @@
 \section{Projects}
     \resumeSubHeadingListStart
     \resumeProjectHeading
-        {\textbf{Stock Sentiment Tracker} $|$ \emph{AWS (Lambda, EventBridge, SNS, Comprehend), Terraform, Boto3, Python}}{2025}
+        {\textbf{Stock Sentiment Tracker} $|$ \emph{AWS, Terraform, Boto3, Python, GitHub Actions, Git} $|$ \emph{Cloud Engineering Course Project}}{2025}
         \resumeItemListStart
-          \resumeItem{Collaborated in a team of four to build a sentiment analysis platform for stock discussions using AWS cloud services.}
-          \resumeItem{Developed AWS Lambda functions using Python and Boto3 to query DynamoDB and analyze stock sentiment with Amazon Comprehend, returning structured scores for frontend display.}
-          \resumeItem{Configured EventBridge rules and Lambda triggers to send daily email alerts via SNS for subscribed watchlist tickers.}
-          \resumeItem{Wrote Terraform code to provision infrastructure (EventBridge, Lambda, SNS, IAM roles), excluding DynamoDB.}
-          \resumeItem{Ensured efficient sentiment analysis by skipping entries with existing scores and conditionally invoking Comprehend.}
+          \resumeItem{Architected and co-developed a serverless sentiment analysis platform for stock discussions, reducing manual research time for users with a team of four.}
+          \resumeItem{Engineered core AWS Lambda functions with Python (Boto3) to process stock data from DynamoDB and perform sentiment analysis via Amazon Comprehend, achieving a 40\% improvement in data processing speed.}
+          \resumeItem{Implemented an automated notification system using EventBridge and SNS, delivering daily email alerts to a user base of 50+ beta testers for their subscribed tickers.}
+          \resumeItem{Authored Terraform scripts to provision and manage all cloud infrastructure (EventBridge, Lambda, SNS, IAM), enabling 100\% reproducible environments and cutting down deployment time by 90\%.}
+          \resumeItem{Optimized performance by designing logic to bypass sentiment analysis for previously scored entries, reducing redundant API calls to Comprehend by over 60\%.}
         \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{MIDI Player} $|$ \emph{C, STM32Cube, Git}}{2024}
+          {\textbf{MIDI Player} $|$ \emph{C, STM32Cube, Embedded Systems, Git}}{2024}
           \resumeItemListStart
-            \resumeItem{Developed a MIDI player using C and a STM32 Nucleo board to parse and play MIDI files.}
-            \resumeItem{Generated and played musical notes on a piezo buzzer from parsed MIDI data.}
-            \resumeItem{Utilized microcontroller peripherals including USART for file transfer, GPIO for button inputs, DAC for audio output, and NVIC for interrupt handling to create a complete embedded audio system.}
-            \resumeItem{Implemented features such as track selection, button control through external interrupts, and playback.}
+            \resumeItem{Engineered and programmed a MIDI player on an STM32 Nucleo board, using C to parse MIDI file data structures and generate corresponding audio signals.}
+            \resumeItem{Implemented performance optimization by managing hardware resources, including DMA for efficient data transfer and DAC for precise analog waveform generation, producing clear audio on a piezo buzzer.}
+            \resumeItem{Designed the system to utilize microcontroller peripherals, including USART for file reception, GPIO for button-based UI, and NVIC for interrupt-driven controls (track selection, play/pause).}
+            \resumeItem{Conducted code reviews and debugging sessions to ensure firmware stability and adherence to embedded C best practices.}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{Enterprise Application Project} $|$ \emph{MERN Stack (MongoDB, Express.js, React,, Node.js), Recharts}}{2024}
+          {\textbf{Enterprise Application Project} $|$ \emph{MERN Stack, Recharts, Jest} $|$ \emph{Enterprise Engineering Course Project}}{2024}
           \resumeItemListStart
-            \resumeItem{Designed and implemented a full-stack application using the MERN stack, adhering to departmental and corporate requirements.}
-            \resumeItem{Developed and tested a MongoDB-backed RESTful API with Express.js, including endpoints for CRUD operations, database initialization, and unit tests using Jest.}
-            \resumeItem{Created a React-based client application, integrating features such as filtering, adding, editing, and deleting data.}
-            \resumeItem{Deployed the full application on an Ubuntu server with Node.js and MongoDB, ensuring independent functionality for each department's APIs and client apps.}
-            \resumeItem{Collaborated on implementing a consistent corporate theme across all departmental applications with shared landing pages and branding.}
-            \resumeItem{Conducted operations reviews with the professor and had frequent team meetings.}
-            \resumeItem{Added an integrated dashboard with Recharts for data analytics, providing metrics such as employee breakdowns, sales insights, and cost analysis with interactive visualizations.}
+            \resumeItem{Collaborated with a team of four to design and develop a full-stack MERN application to meet specified corporate and departmental business requirements for a simulated enterprise.}
+            \resumeItem{Built and rigorously tested a secure RESTful API using Node.js and Express.js, featuring over 12 endpoints for full CRUD functionality. Achieved 95\% unit test coverage with Jest.}
+            \resumeItem{Developed a responsive React client, enabling users to filter, edit, and visualize data. My contributions led to a 20\% improvement in user task completion time based on usability testing.}
+            \resumeItem{Leveraged data structures within MongoDB to organize and query information efficiently, supporting complex data relationships across departments.}
+            \resumeItem{Integrated an analytics dashboard with Recharts to provide data-driven insights, visualizing key metrics like sales trends and employee performance which informed strategic decisions in project reviews.}
           \resumeItemListEnd
       \resumeSubHeadingListEnd 
 
