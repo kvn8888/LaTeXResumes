@@ -1,0 +1,184 @@
+%-------------------------
+% Cloud Resume
+% Author : Kevin Chen
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+ 
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Kevin Chen} \\ \vspace{1pt}
+    \small (585) 797-5153 $|$ kc681269@gmail.com $|$ Rochester, NY $|$ 
+    \href{https://www.linkedin.com/in/k3vnc/}{linkedin.com/in/k3vnc} $|$ 
+    \href{https://github.com/kvn8888}{github.com/kvn8888}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Rochester Institute of Technology}{Rochester, NY}
+      {Bachelor of Science in Software Engineering}{Expected May 2027}
+      \resumeItemListStart
+        \resumeItem{\textbf{Cumulative GPA: 3.18}}
+        \resumeItem{\textbf{Dean's List: Spring 2023, Spring 2025}}
+        \resumeItem{\textbf{Relevant Courses:} Eng Cloud Software Systems, Software Testing, Engineering of Enterprise Software Systems, Engineering of Software Subsystems (Embedded), Software Process \& Project Management, Web Engineering, Software Development and Problem Solving 1 \& 2 (Python, Java, Git)}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+  \resumeSubHeadingListStart
+    \resumeItem{AWS Certified Cloud Practitioner -- Amazon Web Services, 2025}
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Languages}{: JavaScript, TypeScript, Python, Java, C, C++, C Sharp, SQL, Bash.} \\
+\textbf{Frontend}{: HTML, CSS, React.js, Next.js, Tailwind CSS.} \\
+\textbf{Backend}{: Node.js, Express.js, Flask, .NET, REST APIs, OAuth 2.0, JWT.} \\
+\textbf{Databases}{: MongoDB, PostgreSQL.} \\
+\textbf{Dev Tools}{: Git, GitHub, GitHub Actions, GitLab (CI/CD, Runner), Docker, Docker Hub, VS Code, Postman, cURL, Vim, Jest, Unix/Linux.} \\
+\textbf{Cloud \& Infra}{: AWS (Lambda, EventBridge, SNS, Comprehend, EC2, S3, CloudWatch, IAM), Terraform, Vercel.} \\
+\textbf{Other}{: Apache HTTP Server, Selenium, JSON, XML, Agile Methodologies, Scrum}}}
+\end{itemize}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading
+    {\textbf{Stock Sentiment Tracker} $|$ \emph{AWS, Terraform, Boto3, Python, GitHub Actions, Git} $|$ \emph{Cloud Engineering Course Project}}{2025}
+    \resumeItemListStart
+        \resumeItem{Architected and co-developed a serverless sentiment analysis platform for stock discussions with a team of four, reducing manual research time for users.}
+        \resumeItem{Programmed AWS Lambda functions using Python (Boto3) to perform sentiment analysis with Amazon Comprehend, optimizing logic to reduce redundant API calls and improve data processing speed.}
+        \resumeItem{Implemented an automated notification system using EventBridge and SNS, delivering daily email alerts to users for their subscribed tickers.}
+        \resumeItem{Authored Infrastructure as Code (IaC) Terraform scripts to provision and manage all cloud infrastructure (EventBridge, Lambda, SNS, IAM), enabling 100\% reproducible environments and cutting down deployment time by 90\%.}
+    \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{AI Agent Automation System (MCP)} $|$ \emph{Vercel, Google Apps Script, Node.js, TypeScript} $|$ \emph{Personal Project}}{2025}
+        \resumeItemListStart
+            \resumeItem{Built a full-stack AI automation pipeline using a custom Model Context Protocol (MCP) server to enable AI agents to interface with structured job tracking data.}
+            \resumeItem{Created MCP tools: `append\_job\_row` to insert structured entries into Google Sheets, `lookup\_jobs` to prevent duplicates, and `daily\_application\_stats` to return real-time analytics.}
+            \resumeItem{Deployed the MCP server on Vercel and integrated it with Google Apps Script for cloud-based document processing.}
+            \resumeItem{Streamlined multi-agent coordination and decision-making across platforms to eliminate repetitive job tracking tasks.}
+        \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Enterprise Application Project} $|$ \emph{MERN Stack, Recharts, Jest} $|$ \emph{Enterprise Engineering Course Project}}{2024}
+          \resumeItemListStart
+            \resumeItem{Collaborated with a team of four to design and develop a full-stack MERN application to meet specified corporate and departmental business requirements for a simulated enterprise.}
+            \resumeItem{Built and rigorously tested a secure RESTful API using Node.js and Express.js, featuring over 12+ endpoints for full CRUD functionality. Achieved 95\% unit test coverage with Jest.}
+            \resumeItem{Developed a responsive React client, enabling users to filter, edit, and visualize data.}
+            \resumeItem{Managed the deployment of the full MERN stack to an Ubuntu server, configuring Apache HTTP Server as a reverse proxy to the Node.js/Express.js backend.}
+            \resumeItem{Integrated and debugged an analytics dashboard with Recharts to provide data-driven insights, visualizing key metrics like sales trends and employee performance which informed strategic decisions in project reviews.}
+          \resumeItemListEnd
+      \resumeSubHeadingListEnd 
+
+%-----------CLUBS-----------
+% \section{Student Organizations}
+%   \resumeSubHeadingListStart
+%     \resumeItem{RIT Democrats}
+%     \resumeItem{RIT AI Club}
+%   \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
