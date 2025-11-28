@@ -1,0 +1,263 @@
+%-------------------------
+% Master Resume - All Projects & Skills
+% Author : Kevin Chen
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+% NOTE: This is a comprehensive repository of all experience.
+%       It will exceed one page - use for ATS or as a reference.
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Kevin Chen} \\ \vspace{1pt}
+    \small (585) 797-5153 $|$ kc681269@gmail.com $|$ Rochester, NY $|$ 
+    \href{https://www.linkedin.com/in/k3vnc/}{linkedin.com/in/k3vnc} $|$ 
+    \href{https://github.com/kvn8888}{github.com/kvn8888}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Rochester Institute of Technology}{Rochester, NY}
+      {Bachelor of Science in Software Engineering}{Expected May 2027}
+      \resumeItemListStart
+        \resumeItem{\textbf{Cumulative GPA: 3.18}}
+        \resumeItem{\textbf{Dean's List: Spring 2023, Spring 2025}}
+        \resumeItem{\textbf{Relevant Courses:} Eng Cloud Software Systems, Software Testing, Engineering of Enterprise Software Systems, Engineering of Software Subsystems (Embedded), Software Process \& Project Management, Web Engineering, Software Development and Problem Solving 1 \& 2 (Python, Java, Git)}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+  \resumeSubHeadingListStart
+    \resumeItem{AWS Certified Cloud Practitioner -- Amazon Web Services, 2025}
+    \resumeItem{Ivalua Level 1 (Platform) and Level 2 (Technical and Configuration) Certifications -- Ivalua, 2025}
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS (COMPREHENSIVE)-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Programming Languages}{: Java, Python, JavaScript, TypeScript, C, C++, C Sharp, SQL, Bash.} \\
+\textbf{Frontend}{: HTML, CSS, React.js, Next.js, Tailwind CSS.} \\
+\textbf{Backend}{: Node.js, Express.js, Flask, .NET, Prisma ORM, REST APIs, OAuth 2.0, JWT.} \\
+\textbf{Databases}{: MongoDB, PostgreSQL, Microsoft SQL Server, MariaDB, DynamoDB, MySQL.} \\
+\textbf{Dev Tools}{: Git, GitHub, GitHub Actions, GitLab (CI/CD, Runner), SVN, Docker, Docker Compose, Nx Monorepo, VS Code, Visual Studio, Postman, cURL, Vim, Jest, JUnit, Pytest, Unix/Linux.} \\
+\textbf{Cloud \& Infra}{: AWS (Lambda, EventBridge, SNS, Comprehend, EC2, S3, CloudWatch, IAM), Azure (Function Apps), Terraform, Terraform Cloud, Vercel, nginx, UFW, SSL/TLS.} \\
+\textbf{Embedded \& Hardware}{: STM32Cube, STM32 HAL, I2C, UART, SPI, DMA, DAC, GPIO, NVIC.} \\
+\textbf{Other}{: Apache HTTP Server, Selenium, JSON, XML, Agile Methodologies, Scrum, SwiftUI, AVFoundation.}}}
+\end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Customer Application Engineer Intern}{Oct 2025 -- Apr 2026}
+      {Ivalua}{Fremont, CA (Hybrid)}
+      \resumeItemListStart
+        \resumeItem{Provide post–go-live support for Ivalua's enterprise procurement platform, validating configuration and data change requests using C\#, .NET, and Microsoft SQL Server.}
+        \resumeItem{Diagnosed and resolved a role-based authorization misconfiguration for a major semiconductor client that prevented admin users from assigning required access profiles, restoring correct permissions without disrupting ongoing operations.}
+        \resumeItem{Write and execute SQL scripts to clean up customer environments (e.g., removing blank workflows and invalid records) to maintain data integrity and workflow consistency.}
+        \resumeItem{Use tools such as Visual Studio, Tortoise SVN, and Microsoft SQL Server Management Studio to debug issues, review changes, and deliver safe, incremental updates.}
+        \resumeItem{Participate in weekly team meetings to report progress, discuss blockers, and coordinate next steps with senior engineers.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS (ALL)-----------
+\section{Projects}
+
+    \resumeSubHeadingListStart
+
+    %--- DEVOPS / INFRASTRUCTURE PROJECTS ---
+    \resumeProjectHeading
+        {\textbf{TA Portal -- DevOps \& Infrastructure Lead} $|$ \emph{GitHub Actions, Docker, nginx, Prisma, Next.js} $|$ \emph{Course Project}}{2025}
+        \resumeItemListStart
+            \resumeItem{Designed and implemented a GitHub Actions CI/CD pipeline using Nx monorepo tooling, enabling parallel lint/test execution and automated deployments triggered by branch naming conventions.}
+            \resumeItem{Containerized a 4-service architecture (MariaDB, Workflow API, Express.js backend, Next.js frontend) using Docker Compose with health checks, dependency ordering, and persistent volumes.}
+            \resumeItem{Configured nginx as a reverse proxy with SSL termination, routing traffic to Docker containers and eliminating the need for application-level HTTPS handling.}
+            \resumeItem{Established SSH key-based authentication between GitHub Actions and the production VM, enabling secure passwordless automated deployments.}
+            \resumeItem{Set up UFW firewall rules to allow HTTP/HTTPS traffic and GitHub Actions runner access while maintaining server security.}
+            \resumeItem{Fixed Prisma ORM container issues by adding client generation steps to Dockerfiles, resolving runtime initialization errors.}
+            \resumeItem{Configured Next.js basePath routing to work behind nginx reverse proxy, eliminating 404 errors in production.}
+            \resumeItem{Authored comprehensive deployment documentation covering Docker, nginx, firewall configuration, and troubleshooting procedures.}
+        \resumeItemListEnd
+
+    %--- CLOUD PROJECTS ---
+    \resumeProjectHeading
+    {\textbf{Stock Sentiment Tracker} $|$ \emph{AWS, Terraform, Boto3, Python, GitHub Actions, Git} $|$ \emph{Cloud Engineering Course Project}}{2025}
+    \resumeItemListStart
+        \resumeItem{Architected and co-developed a serverless sentiment analysis platform for stock discussions with a team of four, reducing manual research time for users.}
+        \resumeItem{Programmed AWS Lambda functions using Python (Boto3) to perform sentiment analysis with Amazon Comprehend, optimizing logic to reduce redundant API calls and improve data processing speed.}
+        \resumeItem{Implemented an automated notification system using EventBridge and SNS, delivering daily email alerts to users for their subscribed tickers.}
+        \resumeItem{Authored Infrastructure as Code (IaC) Terraform scripts to provision and manage all cloud infrastructure (EventBridge, Lambda, SNS, IAM), enabling 100\% reproducible environments and cutting down deployment time by 90\%.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{Azure Function \& Google Cloud TTS} $|$ \emph{Terraform, Azure, GitHub Actions, Node.js} $|$ \emph{Personal Project}}{2025}
+        \resumeItemListStart
+            \resumeItem{Engineered and deployed Azure Function App infrastructure using Terraform for a Node.js serverless application, fully managed via Terraform Cloud for state consistency.}
+            \resumeItem{Built a complete CI/CD pipeline in GitHub Actions that automated infrastructure provisioning, cutting manual deployment steps by 100\%.}
+            \resumeItem{Diagnosed and resolved complex deployment blockers, including Azure regional quotas, Terraform provider bugs, and state file conflicts, leading to a 100\% success rate for subsequent deployments.}
+            \resumeItem{Authored detailed documentation on the troubleshooting process, establishing best practices for managing cloud resource limitations and provider-specific versioning issues.}
+        \resumeItemListEnd
+
+    %--- EMBEDDED / IoT PROJECTS ---
+    \resumeProjectHeading
+        {\textbf{IoT Environmental Monitor} $|$ \emph{C, STM32 HAL, I2C, UART, AWS IoT} $|$ \emph{Personal Project}}{2025}
+        \resumeItemListStart
+          \resumeItem{Developed and programmed an embedded environmental monitor on an STM32 Nucleo board to collect sensor data at a 1Hz frequency and display it on a 1602 LCD.}
+          \resumeItem{Used low-level drivers in C to interface with a DHT22 temperature/humidity sensor via I2C, implementing error handling for bus communication failures.}
+          \resumeItem{Retargeted the \texttt{\_write} syscall to stream debug logs over UART, reducing debugging time compared to manual methods.}
+        \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{MIDI Player} $|$ \emph{C, STM32Cube, Embedded Systems, Git} $|$ \emph{Course Project}}{2024}
+        \resumeItemListStart
+            \resumeItem{Engineered and debugged a MIDI player on an STM32 Nucleo board, using C to parse MIDI file data structures and generate corresponding audio signals.}
+            \resumeItem{Implemented performance optimization by managing hardware resources, including DMA for efficient data transfer and DAC for precise analog waveform generation, producing clear audio on a piezo buzzer.}
+            \resumeItem{Designed the system to utilize microcontroller peripherals, including USART for file reception, GPIO for button-based UI, and NVIC for interrupt-driven controls (track selection, play/pause).}
+            \resumeItem{Conducted code reviews and debugging sessions to ensure firmware stability and adherence to embedded C best practices.}
+        \resumeItemListEnd
+
+    %--- FULLSTACK / WEB PROJECTS ---
+    \resumeProjectHeading
+        {\textbf{Enterprise Application Project} $|$ \emph{MERN Stack, Recharts, Jest} $|$ \emph{Enterprise Engineering Course Project}}{2024}
+        \resumeItemListStart
+          \resumeItem{Collaborated with a team of four using Agile Methodologies to develop a full-stack MERN application for a simulated enterprise, meeting specified business requirements.}
+          \resumeItem{Built and tested a secure RESTful API with Node.js, Express.js, and MongoDB, featuring over 12 CRUD endpoints and achieving 95\% unit test coverage with Jest.}
+          \resumeItem{Developed a responsive React client with a Recharts analytics dashboard to visualize key metrics, which improved user task completion time and informed strategic decisions.}
+          \resumeItem{Managed the deployment of the full MERN stack to an Ubuntu server, configuring Apache HTTP Server as a reverse proxy to the backend.}
+          \resumeItem{Integrated and debugged an analytics dashboard with Recharts to provide data-driven insights, visualizing key metrics like sales trends and employee performance which informed strategic decisions in project reviews.}
+        \resumeItemListEnd
+
+    %--- MOBILE / AI PROJECTS ---
+    \resumeProjectHeading
+        {\textbf{WatchOS Voice Chatbot} $|$ \emph{SwiftUI, XCode, Groq API, REST} $|$ \emph{Personal Project}}{2024}
+        \resumeItemListStart
+            \resumeItem{Programmed a proof-of-concept voice-to-voice chatbot on watchOS using SwiftUI for the user interface and AVFoundation for audio capture and playback.}
+            \resumeItem{Integrated with the Groq API for near-real-time AI inference, leveraging Whisper for speech-to-text and Llama 3.1 for text generation, achieving an average response time of under 2 seconds.}
+            \resumeItem{Engineered the network layer to handle asynchronous API calls and manage data flow between the app and the backend services efficiently.}
+        \resumeItemListEnd
+
+    %--- FOUNDATIONAL PROJECTS ---
+    \resumeProjectHeading
+        {\textbf{Rush Hour Puzzle Game} $|$ \emph{Java, JavaFX, JUnit, Git} $|$ \emph{Course Project}}{2023}
+        \resumeItemListStart
+            \resumeItem{Collaborated in a team of three to build a fully functional Rush Hour puzzle game with a JavaFX GUI, following Agile/Scrum practices.}
+            \resumeItem{Designed core game logic with a backtracking algorithm and wrote JUnit tests covering 90\% of code to ensure stability.}
+            \resumeItem{Managed Git workflow (branching, merging, and reviews) to maintain efficient version control and collaboration.}
+        \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+% %-----------CLUBS-----------
+% \section{Student Organizations}
+%   \resumeSubHeadingListStart
+%     \resumeItem{RIT Democrats}
+%     \resumeItem{RIT AI Club}
+%   \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
+

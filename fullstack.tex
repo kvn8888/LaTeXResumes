@@ -130,6 +130,7 @@
 \section{Certifications}
   \resumeSubHeadingListStart
     \resumeItem{AWS Certified Cloud Practitioner -- Amazon Web Services, 2025}
+    \resumeItem{Ivalua Level 1 (Platform) and Level 2 (Technical and Configuration) Certifications -- Ivalua, 2025}
   \resumeSubHeadingListEnd
 
 %-----------PROGRAMMING SKILLS-----------
@@ -137,16 +138,41 @@
 \begin{itemize}[leftmargin=0.15in, label={}]
 \small{\item{
 \textbf{Programming Languages}{: Java, Python, JavaScript, TypeScript, C, C++, C Sharp, SQL, Bash.} \\
-\textbf{Web Technologies}{: HTML, CSS, React.js, Next.js, Node.js, Express.js, Flask, .NET, Vercel, REST APIs, OAuth 2.0.} \\
-\textbf{Databases}{: MongoDB, PostgreSQL.} \\
-\textbf{Dev Tools}{: Git, GitHub, GitHub Actions, GitLab (CI/CD, Runner), Docker, Docker Hub, VS Code, Postman, cURL, Vim, Jest, JUnit, Pytest, Unix/Linux.} \\
-\textbf{Cloud \& Infra}{: AWS (Lambda, EventBridge, SNS, Comprehend, EC2, S3, CloudWatch, IAM), Terraform, Vercel.} \\
+\textbf{Web Technologies}{: HTML, CSS, React.js, Next.js, Node.js, Express.js, Prisma ORM, Flask, .NET, Vercel, REST APIs, OAuth 2.0.} \\
+\textbf{Databases}{: MongoDB, PostgreSQL, Microsoft SQL Server, MariaDB.} \\
+\textbf{Dev Tools}{: Git, GitHub, GitHub Actions, GitLab (CI/CD, Runner), SVN, Docker, Docker Compose, Nx, VS Code, Visual Studio, Postman, cURL, Vim, Jest, JUnit, Pytest, Unix/Linux.} \\
+\textbf{Cloud \& Infra}{: AWS (Lambda, EventBridge, SNS, Comprehend, EC2, S3, CloudWatch, IAM), Terraform, nginx, Vercel.} \\
 \textbf{Other Technologies}{: Apache HTTP Server, STM32Cube, JSON, XML, Selenium.}}}\\
 \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Customer Application Engineer Intern}{Oct 2025 -- Apr 2026}
+      {Ivalua}{Fremont, CA (Hybrid)}
+      \resumeItemListStart
+        \resumeItem{Provide post–go-live support for Ivalua's enterprise procurement platform, validating configuration and data change requests using C\#, .NET, and Microsoft SQL Server.}
+        \resumeItem{Diagnosed and resolved a role-based authorization misconfiguration for a major semiconductor client that prevented admin users from assigning required access profiles, restoring correct permissions without disrupting ongoing operations.}
+        \resumeItem{Write and execute SQL scripts to clean up customer environments (e.g., removing blank workflows and invalid records) to maintain data integrity and workflow consistency.}
+        \resumeItem{Use tools such as Visual Studio, Tortoise SVN, and Microsoft SQL Server Management Studio to debug issues, review changes, and deliver safe, incremental updates.}
+        \resumeItem{Participate in weekly team meetings to report progress, discuss blockers, and coordinate next steps with senior engineers, while holding Ivalua Level 1 (Configuration) and Level 2 (Technical) certifications.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
+    \resumeProjectHeading
+        {\textbf{TA Portal -- DevOps \& Infrastructure} $|$ \emph{GitHub Actions, Docker, nginx, Nx, MariaDB} $|$ \emph{RIT SCOOP Program}}{2025}
+        \resumeItemListStart
+          \resumeItem{Designed a GitHub Actions CI/CD pipeline for an Nx monorepo that ran lint/tests in parallel and deployed only affected services based on branch naming conventions.}
+          \resumeItem{Containerized a 4-service architecture (MariaDB, Workflow API, Express.js backend, Next.js frontend) using Docker Compose with health checks, dependency ordering, and persistent volumes for reliable restarts.}
+          \resumeItem{Configured an Ubuntu VM with Docker and nginx as a reverse proxy with SSL termination, routing external HTTPS traffic to internal HTTP containers and simplifying application configuration.}
+          \resumeItem{Established SSH key-based authentication from GitHub Actions to the production VM and secured access with UFW firewall rules, eliminating manual SSH steps from the deployment process.}
+          \resumeItem{Resolved Prisma ORM startup failures and Next.js routing issues behind nginx by updating Dockerfiles and basePath configuration, preventing 404s and container crashes in production.}
+          \resumeItem{Authored deployment and troubleshooting documentation covering Docker, nginx, firewall setup, and CI/CD workflows so other team members could maintain and debug the system.}
+        \resumeItemListEnd
     \resumeProjectHeading
     {\textbf{Enterprise Application Project} $|$ \emph{MERN Stack, Recharts, Jest} $|$ \emph{Enterprise Engineering Course Project}}{2024}
     \resumeItemListStart
@@ -161,20 +187,6 @@
             \resumeItem{Programmed a proof-of-concept voice-to-voice chatbot on watchOS using SwiftUI for the user interface and AVFoundation for audio capture and playback.}
             \resumeItem{Integrated with the Groq API for near-real-time AI inference, leveraging Whisper for speech-to-text and Llama 3.1 for text generation, achieving an average response time of under 2 seconds.}
             \resumeItem{Engineered the network layer to handle asynchronous API calls and manage data flow between the app and the backend services efficiently.}
-        \resumeItemListEnd
-    \resumeProjectHeading
-        {\textbf{Rush Hour Puzzle Game} $|$ \emph{Java, JavaFX, JUnit, Git} $|$ \emph{Course Project}}{2023}
-        \resumeItemListStart
-            \resumeItem{Collaborated in a team of three to build a fully functional Rush Hour puzzle game with a JavaFX GUI, following Agile/Scrum practices.}
-            \resumeItem{Designed core game logic with a backtracking algorithm and wrote JUnit tests covering 90\% of code to ensure stability.}
-            \resumeItem{Managed Git workflow (branching, merging, and reviews) to maintain efficient version control and collaboration.}
-        \resumeItemListEnd
-    \resumeProjectHeading
-        {\textbf{MIDI Player} $|$ \emph{C, STM32Cube, Embedded Systems, Git}}{2024}
-        \resumeItemListStart
-            \resumeItem{Engineered and debugged a MIDI player on an STM32 Nucleo board, using C to parse MIDI file data structures and generate corresponding audio signals.}
-            \resumeItem{Implemented performance optimization by managing hardware resources, including DMA for efficient data transfer and DAC for precise analog waveform generation, producing clear audio on a piezo buzzer.}
-            \resumeItem{Designed the system to utilize microcontroller peripherals, including USART for file reception, GPIO for button-based UI, and NVIC for interrupt-driven controls (track selection, play/pause).}
         \resumeItemListEnd
     \resumeSubHeadingListEnd
 
